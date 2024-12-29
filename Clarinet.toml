@@ -1,0 +1,24 @@
+[project]
+name = 'Quantum-Experiment-Coordination'
+description = ''
+authors = []
+telemetry = true
+cache_dir = './.cache'
+requirements = []
+[contracts.experiment-scheduler]
+path = 'contracts/experiment-scheduler.clar'
+clarity_version = 2
+epoch = 2.5
+
+[contracts.quantum-token]
+path = 'contracts/quantum-token.clar'
+clarity_version = 2
+epoch = 2.5
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
